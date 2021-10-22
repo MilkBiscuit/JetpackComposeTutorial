@@ -1,5 +1,6 @@
 # Jetpack Compose Tutorial
 
-For more information refer to:
-https://developer.android.com/jetpack/compose/documentation
-https://developer.android.com/jetpack/compose/tutorial
+# Reference
+[Get started with Jetpack Compose](https://developer.android.com/jetpack/compose/documentation)
+
+[Jetpack Compose Tutorial](https://developer.android.com/jetpack/compose/tutorial)

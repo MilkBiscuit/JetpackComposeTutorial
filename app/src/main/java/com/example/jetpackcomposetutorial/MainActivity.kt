@@ -41,6 +41,7 @@ data class Message(val author: String, val body: String)
 
 @Composable
 fun MessageCard(msg: Message) {
+//    Surface {
     Row(modifier = Modifier.padding(all = 8.dp)) {
         Image(
             painter = painterResource(R.drawable.profile_picture),
@@ -73,7 +74,9 @@ fun MessageCard(msg: Message) {
                 elevation = 1.dp,
                 color = surfaceColor,
                 // animateContentSize will change the Surface size gradually
-                modifier = Modifier.animateContentSize().padding(1.dp)
+                modifier = Modifier
+                    .animateContentSize()
+                    .padding(1.dp)
             ) {
                 Text(
                     text = msg.body,
@@ -86,6 +89,7 @@ fun MessageCard(msg: Message) {
             }
         }
     }
+//    }
 }
 
 @Preview(name = "Light Mode")

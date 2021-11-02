@@ -7,14 +7,14 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-private val DarkColorPalette = darkColors(
+private val BasicsDarkColorPalette = darkColors(
     surface = Blue,
     onSurface = Navy,
     primary = Navy,
     onPrimary = Chartreuse
 )
 
-private val LightColorPalette = lightColors(
+private val BasicsLightColorPalette = lightColors(
     surface = Blue,
     onSurface = Color.White,
     primary = LightBlue,
@@ -22,7 +22,38 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun JetpackComposeTutorialTheme(
+fun BasicsTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
+    val colors = if (darkTheme) {
+        BasicsDarkColorPalette
+    } else {
+        BasicsLightColorPalette
+    }
+
+    MaterialTheme(
+        colors = colors,
+        typography = Typography,
+        shapes = Shapes,
+        content = content
+    )
+}
+
+private val DarkColorPalette = darkColors(
+    primary = Purple200,
+    primaryVariant = Purple700,
+    secondary = Teal200
+)
+
+private val LightColorPalette = lightColors(
+    primary = Purple500,
+    primaryVariant = Purple700,
+    secondary = Teal200
+)
+
+@Composable
+fun LayoutsCodelabTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {

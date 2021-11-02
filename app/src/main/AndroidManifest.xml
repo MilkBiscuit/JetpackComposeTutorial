@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackComposeTutorial">
         <activity
-            android:name=".MainActivity"
+            android:name=".LayoutMainActivity"
             android:exported="true"
             android:theme="@style/Theme.JetpackComposeTutorial">
             <intent-filter>
@@ -20,10 +20,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".BasicsMainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.JetpackComposeTutorial" />
+        <activity
             android:name=".OldMainActivity"
             android:exported="true"
-            android:theme="@style/Theme.JetpackComposeTutorial">
-        </activity>
+            android:theme="@style/Theme.JetpackComposeTutorial" />
     </application>
 
 </manifest>

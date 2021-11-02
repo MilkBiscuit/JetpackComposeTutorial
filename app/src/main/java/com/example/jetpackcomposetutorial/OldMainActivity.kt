@@ -23,13 +23,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.jetpackcomposetutorial.ui.theme.JetpackComposeTutorialTheme
+import com.example.jetpackcomposetutorial.ui.theme.BasicsTheme
 
 class OldMainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JetpackComposeTutorialTheme {
+            BasicsTheme {
                 Conversation(SampleData.conversationSample)
             }
         }
@@ -100,7 +100,7 @@ fun MessageCard(msg: Message) {
 )
 @Composable
 fun PreviewMessageCard() {
-    JetpackComposeTutorialTheme {
+    BasicsTheme {
         MessageCard(
             msg = Message("Colleague", "Hey, take a look at Jetpack Compose, it's great!")
         )
@@ -119,7 +119,7 @@ fun Conversation(messages: List<Message>) {
 @Preview
 @Composable
 fun PreviewConversation() {
-    JetpackComposeTutorialTheme {
+    BasicsTheme {
         Conversation(SampleData.conversationSample)
     }
 }
